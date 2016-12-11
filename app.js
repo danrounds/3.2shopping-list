@@ -95,10 +95,9 @@ function deleteButton() {
 
 function checkButton() {
     $('.shopping-list').on('click', '.shopping-item-toggle', function(event){
-        var itemObj = $(this).parents('li').find('.shopping-item');
-        checkItem(state, itemObj.text());
-        // alert(itemObj.text());
-        itemObj.toggleClass('shopping-item__checked');
+        var listItem = $(this).parents('li').find('.shopping-item');
+        checkItem(state, listItem.text());
+        listItem.toggleClass('shopping-item__checked');
     });
 }
 
